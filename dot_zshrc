@@ -168,7 +168,7 @@ proxy_port=7897  # Clash/V2Ray等常用7890
 # HTTP/HTTPS代理别名
 alias proxy='export http_proxy="http://${hostip}:${proxy_port}"; export https_proxy="http://${hostip}:${proxy_port}"; export ALL_PROXY="http://${hostip}:${proxy_port}"; echo "Proxy set to ${hostip}:${proxy_port}"'
 # SOCKS5代理别名（如使用V2Ray等）
-alias proxy-socks='export ALL_PROXY="socks5://${hostip}:10808"; echo "SOCKS5 proxy set to ${hostip}:10808"'
+alias proxy-socks='export ALL_PROXY="socks5://${hostip}:${proxy_port}"; echo "SOCKS5 proxy set to ${hostip}:10808"'
 # 取消代理设置
 alias unproxy='unset http_proxy https_proxy ALL_PROXY; echo "Proxy settings cleared"'
 # 查看当前代理设置
